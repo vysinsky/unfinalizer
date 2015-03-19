@@ -1,0 +1,27 @@
+{
+    "name": "dotblue/unfinalizer",
+    "description": "Removes final keyword from any source code for easier testing",
+    "type": "library",
+    "license": ["BSD-3-Clause"],
+    "authors": [
+        {
+            "name": "Michal Vyšinský",
+            "homepage": "http://github.com/vysinsky"
+        },
+        {
+            "name": "Vojtěch Dobeš",
+            "homepage": "http://github.com/vojtech-dobes"
+        },
+        {
+            "name": "dotBlue",
+            "homepage": "http://dotblue.net"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/dotblue/unfinalizer/issues",
+        "source": "https://github.com/dotblue/unfinalizer"
+    },
+    "require": {
+        "php": ">=5.4"
+    }
+}
