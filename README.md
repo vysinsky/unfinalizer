@@ -35,3 +35,14 @@ $unfinalizer->register(new DotBlue\Unfinalizer\Composer(__DIR__ . '/vendor'));
 ```
 
 > That's it, you don't need to require `vendor/autoload.php` by yourself anymore.
+
+### Nette [RobotLoader](https://github.com/nette/robot-loader)
+
+Register `DotBlue\Unfinalizer\NetteRobotLoader`.
+
+```php
+$robotLoader = $unfinalizer->register(new DotBlue\Unfinalizer\NetteRobotLoader())
+	->setCacheStorage(new Nette\Caching\Storages\FileStorage(__DIR__ . '/temp'))
+	->addDirectory(__DIR__ . '/src')
+	->register();
+```
