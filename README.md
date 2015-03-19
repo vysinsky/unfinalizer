@@ -25,3 +25,13 @@ $unfinalizer->setTempDirectory(__DIR__ . '/vendor-unfinalized');
 ## Drivers
 
 Last step is registering wrappers for various autoloaders that you may be using.
+
+### Composer
+
+Register  `DotBlue\Unfinalizer\Composer`. It's constructor requires absolute path to the `vendor` directory.
+
+```php
+$unfinalizer->register(new DotBlue\Unfinalizer\Composer(__DIR__ . '/vendor'));
+```
+
+> That's it, you don't need to require `vendor/autoload.php` by yourself anymore.
