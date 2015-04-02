@@ -52,7 +52,9 @@ class NetteRobotLoader extends Nette\Loaders\RobotLoader implements Driver
 					$this->rebuild();
 				}
 			} elseif (!$rebuilt && filemtime($info['file']) !== $info['time']) {
-				$this->updateFile($info['file']);
+				$method = $reflection->getMethod('updateFile');
+				$method->setAccessible(TRUE);
+				$method->invoke($this, $info['file']);
 				if (!isset($classes[$type])) {
 					$classes[$type] = 0;
 				}
